@@ -1,9 +1,16 @@
-import React from 'react';
-import './App.css';
+import { Container } from "@material-ui/core";
+import { Navbar } from "./components/Navbar";
+import "./App.css";
+import { GlobalStyles } from "./_utils/GlobalStyles";
 
 function App() {
   return (
-    <div></div>
+    <>
+      <GlobalStyles />
+      <Navbar />
+      <Container>
+      </Container>
+    </>
   );
 }
 
