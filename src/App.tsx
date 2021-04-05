@@ -2,14 +2,18 @@ import { Container } from "@material-ui/core";
 import { Navbar } from "./components/Navbar";
 import "./App.css";
 import { GlobalStyles } from "./_utils/GlobalStyles";
+import { HomePage } from "./pages/HomePage";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <GlobalStyles />
       <Navbar />
-      <Container>
-      </Container>
+      <Switch>
+        <Route exact path="/" component={HomePage}></Route>
+        <Route path="/recipes"></Route>
+      </Switch>
     </>
   );
 }

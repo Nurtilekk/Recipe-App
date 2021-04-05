@@ -4,7 +4,7 @@ import { Container } from "@material-ui/core";
 
 export const Navbar = () => {
   return (
-    <SNavbarWrapper>
+    <SHeader>
       <Container>
         <SNavbar>
         <SLogo>
@@ -40,13 +40,17 @@ export const Navbar = () => {
         </SMenuItems>
         </SNavbar>
       </Container>
-    </SNavbarWrapper>
+    </SHeader>
   );
 };
 
-const SNavbarWrapper = styled.div`
+const SHeader = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 35px 0;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid rgba(256, 256, 256, 0.2);
 `;
 
 const SNavbar = styled.nav`
@@ -84,5 +88,8 @@ const SMenuItem = styled.li`
   }
   a.active {
     color: var(--color-primary);
+  }
+  a {
+    transition: color 0.4s ease; 
   }
 `;
