@@ -12,7 +12,6 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
-        <Route path="/recipes"></Route>
       </Switch>
     </>
   );

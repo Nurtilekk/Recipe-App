@@ -18,3 +18,8 @@ ol {
 a {
   text-decoration: none;
 }
+
+button {
+  outline: none;
+  cursor: pointer;
+}
