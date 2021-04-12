@@ -3,12 +3,15 @@ import styled from "styled-components";
 import { Button } from "../components/Button";
 import {
   BTN_LG_FONT_SIZE,
-  FONT_WEIGHT_BOLD,
   FONT_WEIGHT_LIGHT,
   PRIMARY_BTN_COLOR,
 } from "../constants";
 
-export const HomePage: React.FC = () => {
+interface HomePageProps {
+  setModal: (status: boolean) => void;
+}
+
+export const HomePage: React.FC<HomePageProps> = ({ setModal }) => {
   return (
     <SSection>
       <Container>
@@ -18,6 +21,7 @@ export const HomePage: React.FC = () => {
           color="#fff"
           size={BTN_LG_FONT_SIZE}
           bgColor={PRIMARY_BTN_COLOR}
+          onClick={() => setModal(true)}
         >
           Find
         </Button>
